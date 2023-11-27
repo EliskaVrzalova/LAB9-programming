@@ -1,0 +1,176 @@
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 7 min
+Q1
+
+main()
+start function
+
+set random numbers generator;
+
+generateRandom(); //function call
+
+end function
+
+
+generateRandom
+start function
+
+count = 1;
+sum = 0;
+number = 0;
+
+while(count <= 10)
+	number = (rand()%40) +1;
+	display message "" + number;
+	sum = sum + number;
+	count ++;
+end while
+display message "The sum of the numbers is" + sum;
+----------------------------------------------------------------
+
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 
+Q2
+
+main ()
+start function
+
+sum = 0;
+set random numbers generator;
+
+sum = generateRandomEven(); //function call
+display message"The sum of the numbers is:" + sum;
+
+end function
+
+generateRandomEven()
+start function
+
+count = 10;
+sum = 0;
+number = 0;
+
+while(count <=10)
+	number = (rand()% 41) + 10;
+	if(number %2 == 0)
+		sum = sum + number;
+		count ++;
+	end if
+end while
+return sum;
+
+end function
+----------------------------------------------------------------------
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 
+Q3
+
+main()
+start function
+
+//variables
+numberOfNumbers = 0;
+//input
+display message "Enter the number of numbers:";
+input number;
+
+//error checking
+if(number <= 0)
+	display message "Error: number entered cannot be less than 0.";
+else
+	calculateNumbers(numberOfNumbers); //function call
+end if
+
+end function
+
+calculateNumbers(t_number)
+start function
+
+sum = 0;
+sumOdd= 0;
+count = 1;
+number = 0;
+
+while(count <= t_numberOfNumbers)
+	display message "Enter number:" + number;
+        input number;
+	sum = sum + number
+	if(t_numberOfNumbers % 2 == 1)
+		sumOdd == sumOdd + number;
+		count
+	count++;
+end while
+
+display message "The sum of the numbers:" + sum;
+display message "The sum of odd numbers:" + sumOdd;
+
+end function
+--------------------------------------------------------------------------------------------
+eliska vrzalova
+27/11/2023
+est time: 15 min
+act time: 
+Q4
+
+main()
+start function
+
+//variables
+numberOfNumbers = 0;
+//input
+display message "Enter the number of numbers:";
+input number;
+
+
+//error checking
+if(numberofNumbers <= 0)
+	display message "Error: number entered cannot be less than 0.";
+else
+	calculationsNum(numberOfNumbers); //function call
+end if
+
+end function
+
+calculationsNum(t_numberOfNumbers)
+start function
+
+number = 0;
+sum = 0;
+largestNum = 5;
+lowestNum = 15;
+averageNum = 0;
+
+
+while(count <= t_numberOfNumbers)
+	display message "Enter number:" + number;
+        input number;
+	if(number >= 5 and number <= 15)
+		sum = sum + number;
+		if(largestNum < number)
+			largestNum = number;
+		end if
+		if(number < lowestNumber)
+			lowestNum = number;
+		end if
+	else
+		display message"Error: number must be in the range 5-15";
+	end if
+	count++;
+end while
+
+averageNum = sum / t_numberOfNumbers;
+dipslay message "The sum of the numbers is:" + sum;
+display message "The largest number is:" + largestNum;
+display message "The lowest number is:" + lowestNum;
+
+
+
+
+
+
