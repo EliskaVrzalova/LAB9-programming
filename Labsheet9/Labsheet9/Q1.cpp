@@ -10,7 +10,7 @@
 #include <iostream>
 
 void generateRandom();
-int main()
+int main1()
 {
 	srand(time(nullptr));
 	generateRandom();
