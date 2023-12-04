@@ -9,7 +9,7 @@
 
 int reverseDisplay(int t_number);
 
-int main()
+int main8()
 {
 	//variables
 	unsigned int number = 0;

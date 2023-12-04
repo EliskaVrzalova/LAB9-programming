@@ -377,19 +377,23 @@ while(count >= numberOfNumbers)
 		if(number > largestNum)
 			largestNum = number;
 		end if
-		if(number == largestNum)
-			largestNumOccurence = largestNumOccurence++;
-		end if
+			if(number == largestNum)
+				largestNumOccurence = largestNumOccurence++;
+			end if
 		if(lowestNum > number)
 			lowestNum = number;
 		end if
-		if(number == lowestNum)
-			lowestNumOccurence = lowesttNumOccurence++;
+			if(number == lowestNum)
+				lowestNumOccurence = lowesttNumOccurence++;
+			end if
 	else
 		display message "Error: the number must be in the range 1-10";
 	end if
 end while
 
+display message "The highest number is:" + largestNum + " and occured" + largestNumOccurence + "times.";
+
+display message "The lowest number is:" + lowestNum + " and occured" + lowestNumOccurence + "times.";
 
 musi byt iccurrence ifs nested v if kde se zjistuje highest/lowest number????
 
