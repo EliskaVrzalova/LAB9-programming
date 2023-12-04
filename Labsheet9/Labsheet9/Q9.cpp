@@ -32,32 +32,33 @@ void countOccurences()
 
 	while (count <= numberOfNumbers)
 	{
-		std::cout << "Enter a number:";
+		std::cout << "Enter a number:"<<std::endl;
 		std::cin >> number;
-		if (number >= 0 && number <= 10)
+		if (number > 0 && number <= 10)
 		{
 			std::cout << " " << number;
-			if (number > largestNum)
+			if (largestNum < number)
 			{
 				largestNum = number;
+				if (largestNum == number)
+				{
+					largestNumOccurence++;
+				}
 			} 
-			if (number == largestNum)
-			{
-				largestNumOccurence++;
-			}
 			if (lowestNum > number)
 			{
 				lowestNum = number;
+				if (lowestNum == number)
+				{
+					lowestNumOccurence++;
+				}
 			} 
-			if (number == lowestNum)
-			{
-				lowestNumOccurence++;
-			}
 		}
 		else
 		{
 			std::cout << "Error: the number entered must be in the range 1-10." << std::endl;
 		} //end if error checking
+		count++;
 	} // end while
 
 	std::cout << "The largest number is " << largestNum << " and it occured " << largestNumOccurence << " times." << std::endl;

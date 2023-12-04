@@ -389,13 +389,48 @@ while(count >= numberOfNumbers)
 	else
 		display message "Error: the number must be in the range 1-10";
 	end if
+	count++;
 end while
+
 
 display message "The highest number is:" + largestNum + " and occured" + largestNumOccurence + "times.";
 
 display message "The lowest number is:" + lowestNum + " and occured" + lowestNumOccurence + "times.";
+end function
+------------------------------------------------------------------------------------------------------------
+	
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q10
 
-musi byt iccurrence ifs nested v if kde se zjistuje highest/lowest number????
+main()
+start function 
+
+countOccurences();
+end function
+
+countOccurences()
+start function
+
+numberOfNumbers = 0;
+number = 0;
+count = 1;
+position = 0;
+firstPosition = 0;
+lastPosition = 0;
+TARGET_NUMBER = 9;
+
+while(count >= numberOfNumbers)
+	position = count
+	display message "Enter a number:";
+	input number;
+	display message "" + number;
+	if(number == TARGET_NUMBER)
+		firstPosition = position;
+		
+
 
 
 
