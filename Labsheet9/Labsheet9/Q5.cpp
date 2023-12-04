@@ -9,7 +9,7 @@
 
 int addNumbers(int t_startNum, int t_endNum);
 
-int main()
+int main5()
 {
 	int startNum = 0;
 	int endNum = 0;

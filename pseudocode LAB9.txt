@@ -231,6 +231,7 @@ start function
 sum = 0;
 
 sum = sumTotal(); //function
+display message "The sum of the numbers is:" + sum; //answer
 end function
 
 sumTotal()
@@ -240,7 +241,7 @@ sum = 0;
 number = -1;
 
 while(number != 0)
-	display message "Enter number:" + number;
+	display message "Enter number:";
        	input number;
 	if(number >= 5 && number <=12)
 		sum = sum + number;
@@ -252,5 +253,145 @@ end while
 return sum;
 end function
 -----------------------------------------------------------------------------------------------
+
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q7
+
+main()
+start function
+
+choice = 0;
+do
+	display message "Option 1 : Fahrenheit to Celsius conversion";
+	display message "Option 2 : Inches to Centimeters conversion";
+	display message "Option 3 : Exit";
+	display message "Enetr the number of your choice";
+	input choice;
+	switch
+	case 1:
+		FahrenheitToCelsius();
+	case 2:
+		InchesToCentimeters();
+	while(choice != 3); //end do while
+end function
+
+FahrenheitToCelsius()
+start function
+
+fahrenheit = 0;
+celsius = 0;
+CONVERSION = 9/5;
+//input
+display message "Enter the temperature in Fahrenheit:";
+input fahrenheit;
+//conversion
+celsius = (fahrenheit -32)/ CONVERSION;
+display message "The temperature in Celsius is" + celsius + "degrees.";
+
+end function
+
+InchesToCentimeters();
+start function
+
+inches = 0;
+centimeters = 0;
+CONVERSION = 2.54;
+//input
+display message "Enter the lenght in inches:";
+input inches;
+//calculation
+centimeters = inches * CONVERSION;
+display message "The lenght in centimeters is " + centimeters;
+
+end function
+--------------------------------------------------------------------------------------------
+
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q8
+
+main()
+start function
+
+number = 0;
+display = 0;
+//input
+display message "Enter a number:";
+input number ; 
+
+//error checking
+if(number <= 0)
+	display message "Error: number entered must be greater than 0.";
+else
+	display = reverseDisplay(number);
+	display message "" + number;
+end if
+end function
+
+reverseDisplay(t_number)
+start function
+
+while(t_number >= 0)
+	display message "" + t_number;
+	t_number = t_number - 3;
+end while
+return t_number;
+----------------------------------------------------------------------------------------------------
+	
+eliska vrzalova
+04/12/2023
+est time: 15 min
+act time: 
+Q9
+
+main()
+start function 
+
+countOccurences();
+end function
+
+countOccurences()
+start function
+count = 1;
+numberofNumbers = 0;
+number = 0;
+lowestNum = 10;
+largestNum = 1;
+largestNumOccurence = 0;
+lowestNumOccurence = 0;
+
+//input 
+display message please enter the number of numbers:";
+input numberOfNumbers;
+
+while(count >= numberOfNumbers)
+	display message "Enter a number:";
+	input number;
+	if(number >= 1 and number <= 10)
+		display message "" + number;
+		if(number > largestNum)
+			largestNum = number;
+		end if
+		if(number == largestNum)
+			largestNumOccurence = largestNumOccurence++;
+		end if
+		if(lowestNum > number)
+			lowestNum = number;
+		end if
+		if(number == lowestNum)
+			lowestNumOccurence = lowesttNumOccurence++;
+	else
+		display message "Error: the number must be in the range 1-10";
+	end if
+end while
+
+
+musi byt iccurrence ifs nested v if kde se zjistuje highest/lowest number????
+
 
 
