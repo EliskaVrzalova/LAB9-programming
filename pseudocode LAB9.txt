@@ -421,16 +421,63 @@ position = 0;
 firstPosition = 0;
 lastPosition = 0;
 TARGET_NUMBER = 9;
+findFirstposition = false;
 
-while(count >= numberOfNumbers)
+display message "Enter the number of numbers:";
+input numberOfNumbers;
+
+while(count <= numberOfNumbers)
 	position = count
 	display message "Enter a number:";
 	input number;
 	display message "" + number;
-	if(number == TARGET_NUMBER)
+	if(number == TARGET_NUMBER and findFirstPosition == false)
 		firstPosition = position;
-		
+		finfFirstposition = true;
+	end if
+	if(number == TARGET_NUMBER)
+		lastPosition = position;
+	end if
+	count ++;
+end while
+if(lastPosition == 0 and firstPosition != 0)
+	lastPosition = firstPosition;
+end if
 
+display message "The first occurence of the number" + TARGET_NUMBER + "is:" + firstPosition;
+display message "The last occurence of the number" + TARGET_NUMBER + "is:" + lastPosition;
+
+
+-----------------------------------------------------------------------------------------------------------
+eliska vrzalova
+06/12/2023
+est time: 15 min
+act time: 
+Q11
+
+main()
+start function
+
+fibonacciSeries(); //function call
+end function
+
+fibonacciSeries()
+start function
+
+count = 1;
+number = 1;
+nextNumber = 0;
+sum = 0;
+
+while(count <= 20)
+	display message "" + number; 
+	sum = number;
+	sum = sum + nextNumber;
+	nextNumber = number;
+	number = sum;
+	count++;
+end while
+--------------------------------------------------------------------------------------------------------------
 
 
 

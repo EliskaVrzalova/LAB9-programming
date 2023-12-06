@@ -40,19 +40,20 @@ void countOccurences()
 			if (largestNum < number)
 			{
 				largestNum = number;
-				if (largestNum == number)
-				{
-					largestNumOccurence++;
-				}
-			} 
+			}
+			if (largestNum == number)
+			{
+				largestNumOccurence++;
+			}
 			if (lowestNum > number)
 			{
 				lowestNum = number;
-				if (lowestNum == number)
-				{
-					lowestNumOccurence++;
-				}
-			} 
+			}
+			if (lowestNum == number)
+			{
+				lowestNumOccurence++;
+			}
+			
 		}
 		else
 		{
